@@ -1,0 +1,372 @@
+*{
+    box-sizing: content-box;
+}
+html, body {
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #ffffff;
+    color: black;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Cabeçalho*/
+header{
+    display: flex;
+    background-color: #e9e9e9;
+    top: 0;
+    left: 0;
+    padding: 5px 0 5px 0;
+    padding-left: 0;
+    position: fixed;
+    width: 100%;
+    max-height: 120px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.start{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+#logo{
+    width: 200px;
+    height: 100px;
+}
+.icon{
+    color: black;
+    transition: color 0.3s;
+}
+.menu_button{
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+.menu_button:hover{
+    background-color:  rgb(175, 175, 175);
+}
+.menu_button:active{
+    background-color:  rgb(58, 58, 58);
+    transition: all 0.2s;
+}
+.menu{
+    position: relative;
+}
+.menu_content{
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 71px;
+    left: -10px;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.menu_content.open{
+    display: block;
+}
+.menu_content p{
+    color: black;
+    margin: 0;
+    padding: 12px 16px;
+    border-bottom: 1px solid #74A846;
+}
+.menu_content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.menu_content a:hover{
+    background-color: #a3a3a3;
+    transition: background-color 1s;
+}
+.accessibility{
+    display: flex;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    gap: 1rem;
+}
+#tema_btn{
+    border: none;
+    background-color: transparent;
+    border-radius: 9999px 9999px 9999px 9999px;
+    height: 100%;
+}
+.lighticon{
+    display: none;
+}
+#tema_btn:hover{
+    cursor: pointer;
+    color: rgb(8, 47, 153); 
+}
+#tema_btn:active{
+    background-color: rgb(171, 171, 171);
+    transition: all 0.3s;
+}
+header nav{
+    margin-right: 10px;
+    height: 100%;
+}
+header nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    padding: 0;
+}
+header nav ul li a{
+    padding: 0;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 22px;
+    transition: all 0.3s;
+}
+header nav ul li a:hover{
+    color: rgb(8, 47, 153);
+}
+
+/*Seções*/
+
+main{
+    margin-top: 115px;
+    background-color: transparent;
+    padding: 2rem 10rem 8rem 10rem;
+    color: rgb(53, 94, 39);
+    box-sizing: border-box;
+}
+#imgmain{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+figure{
+    margin: 0;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content h1{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2rem;
+    border-bottom: 2px solid rgb(72, 97, 64);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.text_content{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    padding: 1rem;
+    border-radius: 10px;
+  
+}
+.text_content p{
+    margin-bottom: 0;
+}
+/*Rodapé*/
+footer{
+    background-color: #e9e9e9;
+    border-top: 1.5rem solid rgb(120, 209, 120);
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+footer p{
+    margin: 0;
+}
+#contatos{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 10px;
+}
+#logo_footer img{
+    width: 200px;
+    height: 200px;
+}
+#info_contact{
+    padding: 5px;
+}
+#info_contact img{
+    width: 24px;
+    height: 24px;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.cnpj{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+}
+#info_parceiros{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+#info_parceiros h3{
+    margin: 0;
+}
+.parceiros{
+    height: 100%;
+    width: 100%;
+    margin-top: 1rem;
+}
+#info_parceiros a{
+    text-decoration: none;
+    color: black;
+}
+#info_parceiros img{
+    height: 15vh;
+    width: 10vw;
+}
+#info_parceiros a:hover{
+    color: rgb(8, 47, 153);
+}
+#copy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 10px 0 10px 0;
+}
+
+/*Tema escuro*/
+
+body.dark{
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
+body.dark header{
+    background-color: rgb(0, 17, 0);
+}
+body.dark .icon{
+    color: white;
+}
+body.dark .menu_content{
+    background-color: rgb(0, 17, 0);
+}
+body.dark .menu_content p, body.dark .menu_content a{
+    color: white;
+}
+body.dark .menu_content a:hover{
+    background-color: #6c8f2c;
+    color: white;
+}
+body.dark #tema_btn{
+    color: white;
+}
+body.dark .lighticon{
+    display: block;
+}
+body.dark .darkicon{
+    display: none;
+}
+body.dark #tema_btn:hover{
+    color: rgb(8, 47, 153); 
+}
+body.dark #tema_btn:active{
+    background-color: rgb(171, 171, 171);
+    transition: all 0.3s;
+}
+body.dark .accessibility a,
+body.dark header nav ul li a{
+    color: white;
+}
+body.dark header nav ul li a:hover{
+    color: rgb(8, 47, 153);
+}
+body.dark .content{
+  background-color: transparent;
+  color: white;
+}
+body.dark .content h1{
+    border-color: #a3a3a3;
+}
+body.dark footer{
+    background-color: rgb(0, 17, 0);
+    border-color: #041f03;
+}
+body.dark #copy {
+    background-color: #000;
+    color: white;
+}
+
+/*Responsividade*/
+@media screen and (max-width: 768px) {
+    header{
+        width: 100%;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    .menu_content nav{
+        display: block;
+        margin: 0;
+    }
+    .menu_content nav ul{
+        padding: 0;
+        margin: 0;
+    }
+    .menu_content nav ul li{
+        padding: 0;
+    }
+    .menu_content nav ul li a{
+        padding: 12px 16px;
+        font-size: 18px;
+    }
+    .menu_content nav ul li a:hover{
+        color: black;
+    }
+    body.dark header nav ul li a{
+        color: black;
+    }
+    .menu_content p{
+        border-top: 1px solid #3B358D;
+    }
+    .accessibility nav{
+        display: none;
+    }
+    main{
+        width: 100%;
+        padding: 10px;
+    }
+    .content{
+        flex-wrap: wrap;
+        padding: 0;
+    }
+    .text_content{
+        padding: 10px;
+        margin: 0;
+    }
+    #contatos{
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    #info_parceiros{
+        width: 100%;
+        text-align: center;
+    }
+    #info_parceiros img{
+        height: auto;
+        width: 70%;
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+}
