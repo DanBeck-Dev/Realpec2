@@ -1,10 +1,6 @@
 *{
     box-sizing: content-box;
 }
-html, body {
-    overflow-x: hidden;
-}
-
 body{
     background-color: #ffffff;
     color: black;
@@ -33,6 +29,9 @@ header{
     display: flex;
     align-items: center;
     margin-left: 10px;
+}
+#linklogo{
+    height: 100px;
 }
 #logo{
     width: 200px;
@@ -129,7 +128,7 @@ header nav ul li a{
     transition: all 0.3s;
 }
 header nav ul li a:hover{
-    color: rgb(8, 47, 153);
+    color: rgb(9, 63, 211);
 }
 
 /*Seções*/
@@ -146,7 +145,7 @@ main{
     border-radius: 10px;
     margin-top: 0.5rem;
 }
-figure{
+.content figure{
     margin: 0;
 }
 .content{
@@ -208,6 +207,13 @@ footer p{
     align-items: center;
     margin-bottom: 2rem;
 }
+.contact a{
+    text-decoration: none;
+    color: black;
+}
+.contact a:hover{
+    color: rgb(9, 63, 211);;
+}
 .cnpj{
     display: flex;
     flex-direction: column;
@@ -220,6 +226,7 @@ footer p{
 }
 #info_parceiros h3{
     margin: 0;
+    text-align: center;
 }
 .parceiros{
     height: 100%;
@@ -227,15 +234,14 @@ footer p{
     margin-top: 1rem;
 }
 #info_parceiros a{
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     color: black;
 }
 #info_parceiros img{
-    height: 15vh;
+    height: 5rem;
     width: 10vw;
-}
-#info_parceiros a:hover{
-    color: rgb(8, 47, 153);
 }
 #copy{
     display: flex;
@@ -301,6 +307,12 @@ body.dark .content h1{
 body.dark footer{
     background-color: rgb(0, 17, 0);
     border-color: #041f03;
+}
+body.dark .contact a{
+    color: white;
+}
+body.dark .contact a:hover{
+    color: rgb(8, 47, 153);
 }
 body.dark #copy {
     background-color: #000;

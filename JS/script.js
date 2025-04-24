@@ -1,5 +1,18 @@
+window.onload = () => {
+  const darkMode = localStorage.getItem("darkMode");
+  if (darkMode === "enabled") {
+    document.body.classList.add("dark");
+  }
+};
+
 document.getElementById("tema_btn").addEventListener("click", () => {
   document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    localStorage.setItem("darkMode", "disabled");
+  }
 })
 
 document.querySelector(".menu_button").addEventListener("click", () => {
@@ -29,17 +42,14 @@ const form = document.getElementById('form-contrato');
 const mensagemSucesso = document.getElementById('mensagem_sucesso');
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault(); // impede o envio real do formulário
+  e.preventDefault(); 
 
   if (form.checkValidity()) {
-    // Mostra a mensagem de sucesso
     mensagemSucesso.style.display = 'block';
-
-    // Espera 5 segundos e redireciona
     setTimeout(() => {
       window.location.href = 'index.html';
     }, 5000);
   } else {
-    form.reportValidity(); // mostra os avisos de validação padrão
+    form.reportValidity(); 
   }
 });
