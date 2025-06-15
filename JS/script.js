@@ -13,11 +13,25 @@ document.getElementById("tema_btn").addEventListener("click", () => {
   } else {
     localStorage.setItem("darkMode", "disabled");
   }
-})
+});
 
-document.querySelector(".menu_button").addEventListener("click", () => {
-  document.querySelector(".menu_content").classList.toggle("open");
-})
+const menuButton = document.querySelector(".menu_button");
+const menuContent = document.querySelector(".menu_content");
+
+menuButton.addEventListener("click", (event) => {
+  menuContent.classList.toggle("open");
+  event.stopPropagation();
+});
+
+menuContent.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  if (menuContent.classList.contains("open")) {
+    menuContent.classList.remove("open");
+  }
+});
 
 function movenav(){
   const nav = document.getElementById("navbar");
@@ -33,7 +47,7 @@ function movenav(){
       accessibility.appendChild(nav);
     }
     }
-}
+};
 
 window.addEventListener("resize", movenav);
 window.addEventListener("load", movenav);

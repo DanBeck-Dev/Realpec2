@@ -14,7 +14,7 @@ header{
     left: 0;
     padding: 5px 0 5px 0;
     padding-left: 0;
-    position: fixed;
+    position: absolute;
     width: 100%;
     max-height: 120px;
     justify-content: space-between;
@@ -29,6 +29,9 @@ header{
 }
 #linklogo{
     height: 100px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 #logo{
     width: 200px;
@@ -153,6 +156,9 @@ main{
 .form-contrato input{
     font-size: 1.2rem;
 }
+#telefone{
+    text-align: center;
+}
 #servico{
     text-align: center;
     height: 2.5rem;
@@ -161,6 +167,7 @@ main{
 #mensagem{
     height: 5rem;
     font-size: 1.2rem;
+    text-align: justify;
 }
 #submit{
     background-color: white;
@@ -257,7 +264,7 @@ footer p{
 }
 #info_parceiros img{
     height: 5rem;
-    width: 15vw;
+    width: 10vw;
 }
 #info_parceiros a:hover{
     color: rgb(8, 47, 153);
@@ -379,6 +386,10 @@ body.dark #copy {
         margin: 0;
         padding: 1rem;
     }
+    #logo_footer img{
+        width: 100%;
+        height: auto;
+    }
     #contatos{
         padding: 0;
         flex-wrap: wrap;
@@ -392,5 +403,11 @@ body.dark #copy {
         width: 70%;
         max-width: 100%;
         margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 290px) {
+    #logo{
+        width: 90%;
+        height: 50px;
     }
 }
